@@ -1,87 +1,51 @@
 \documentclass[12pt]{article}
- \usepackage[margin=1in]{geometry} 
- \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{amsmath,amsthm,amssymb,amsfonts, 
-hyperref, color, graphicx,ulem}
+\usepackage[margin=1in]{geometry} 
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{ulem}
+\usepackage{graphicx}
 \usepackage{datetime}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc, intersections}
+\usepackage{hyperref}  % always last
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
-\newcommand{\mm}{\textcolor{blue}{You need to use math mode whenever you are writing logic symbols, variables, sets etc. and you need to use text whenever you are writing words. If you are not sure what this means, please speak to me.}}
-\newcommand{\al}{\textcolor{blue}{You might try the align environment as shown below: 
-\begin{align*}
-y=&a+b+a\\
-=&2a+b
-\end{align*}
-The \& symbol allows you to line up the ='s or anything else you want to line up! It also saves you the space between lines of display style equation!}}
-\newcommand{\steps}{\textcolor{blue}{You need to use the claim environment to give a claim, then close that and use the proof environment to give your proof.}}
-\newcommand{\nproof}{\textcolor{blue}{I see what you are trying to say, but this is not a proof. Please see me if you do not understand what I mean by this.}}
-\newcommand{\equal}{\textcolor{blue}{You can only use ``='' between two things which are actually equal. This is not just a way of stringing things together!}}
-\newcommand{\mul}{\textcolor{blue}{This is not a valid way of denoting multiplication. You can use $\times$ or $\cdot$, or often the implied multiplication of adjacent variables.}}
-\newcommand{\ex}{\textcolor{blue}{You cannot just give one example. You are tasked with showing that this claim holds for all possible values.}}
-\newcommand{\thus}{\textcolor{blue}{``therefore'', ``thus", and other words of this flavor should be used only when the preceding sentence leads us to the following sentence. It is not just a way to string things together!}}
-\newcommand{\words}{\textcolor{blue}{You need punctuation and words. Remember a proof is supposed to walk the reader through your thought process.}}
-\newcommand{\order}{\textcolor{blue}{As a general rule, if the sentences can be reorganized and the proof doesn't make significantly less sense, then it is probably not very well structured! The arguments should flow into each other. Generally sentences should justify each other and you should feel like you are building one thought on top of another.}}
-\newcommand{\pr}{\textcolor{blue}{Proofread!}}
-\newcommand{\sen}{\textcolor{blue}{You can't start a sentence with a symbol.}}
-\newcommand\score[1]{\textcolor{blue}{\textbf{ (score: #1) }}}
-\newcommand\blue[1]{\textcolor{blue}{#1}}
-\let\div\undefined
-\DeclareMathOperator{\div}{div}
-\DeclareMathOperator{\dom}{dom}
-\DeclareMathOperator{\im}{im}
 \newenvironment{problem}[2][Problem]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-\newenvironment{claim}[2][Claim]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-
-% You can ignore all the code written above. Most of it is so I can make common comments on your work easily and quickly.
 
 \begin{document}
- 
-\title{MA$\Theta$ Competition Team HW Set 14}
+\pagenumbering{gobble}  % <-- here, not in preamble
+
+\title{MA$\Theta$ Competition Team HW Set 15}
 \author{Anders Christensen, Minjoo Kim}
-\date{March 6, 2026}
-% Add your name in above
+\date{Due April 8, 2026}
 \maketitle
-
-% Do not make any additional changes to the title. The date will just tell me when you last compiled and you will not be penalized for a funny date.
-
- 
-% Notice that this text is not visible when you compile? The "%" symbol comments out everything after it! This allows you to write notes to yourself that won't appear in the document. Of course, you need to take out the "%" when you want it to start showing up!
-
+\thispagestyle{empty}
 \begin{problem}{1}
-For each of the expressions below, use cross-multiplication to evaluate the product. Write each step of the process (each digit of 10). See the slideshow for an example.
-\begin{enumerate}
-\item $23 \times 14$
-\item $47 \times 123$
-\item $312 \times 45$
-\item $342 \times 213$
-\item $54321 \times 2468$ 
-\end{enumerate}
+  State the definition of a rigid transformation.
 \end{problem}
 
 \begin{problem}{2}
-For each of the expressions below, use cross-multiplication to evaluate the product. Do NOT use a calculator, do it in your head.
-\begin{enumerate}
-\item $12 \times 11$
-\item $23 \times 21$
-\item $67 \times 43$
-\item $89 \times 76$
-\item $123 \times 42$
-\item $456 \times 78$
-\item $234 \times 121$
-\item $567 \times 489$
-\item $3456 \times 789$
-\item $98765 \times 4321$
-\end{enumerate}
+  For how many of the following types of quadrilaterals does there exist a point in the plane of a quadrilateral that is equidistant from all four vertices of the quadrilateral?
+  \begin{enumerate}
+    \item A square
+    \item A rectange that is not a square
+    \item A rhombus that is not a square
+    \item A parallelogram that is not a rectangle or a rhombus
+    \item An isosceles trapezoid that is not a parallelogram
+  \end{enumerate}
 \end{problem}
 
 \begin{problem}{3}
-Prove the result $\overline{{n5}^2} = \overline{(n)(n+1)25}$, where $n$ is a positive integer and $\overline{ab}$ denotes the concatenation of digits $a$ and $b$. (Ex. $25^2 = 625 = \overline{(2)(2+1)25}$) 
-\end{problem}
+Jiwu is throwing a very elastic baseball to Anders, who is 50 meters away from him. The baseball bounces off the ground at some point in its trajectory and reaches Anders's hand. Given that Jiwu is 1.80 meters tall, and Anders is 1.85 meters tall, and both throw/receive the ball at head level, what is the minimum path length of the ball's motion?
 
-\begin{problem}{4}
-Prove how cross-multiplication works.
+\begin{problem}{5}
+  Isosceles $\triangle ABC$ has a right angle at $C$. Point $P$ is inside $\triangle ABC$, such that $PA=11$, $PB=7$, and $PC=6$. Legs $\overline{AC}$ and $\overline{BC}$ have length $s=\sqrt{a+b\sqrt{2}}$, where $a$ and $b$ are positive integers. What is $a+b$?
 \end{problem}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{MATHW15-5.png}
+\end{figure}
 \end{document}
