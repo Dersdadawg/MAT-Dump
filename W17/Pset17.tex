@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+ \usepackage[usenames,dvipsnames]{xcolor}
+ \usepackage{enumitem}
+\usepackage{amsmath,amsthm,amssymb,amsfonts, 
+hyperref, color, graphicx,ulem}
+\usepackage{graphicx}
+\usepackage{datetime}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\mm}{\textcolor{blue}{You need to use math mode whenever you are writing logic symbols, variables, sets etc. and you need to use text whenever you are writing words. If you are not sure what this means, please speak to me.}}
+\newcommand{\al}{\textcolor{blue}{You might try the align environment as shown below: 
+\begin{align*}
+y=&a+b+a\\
+=&2a+b
+\end{align*}
+The \& symbol allows you to line up the ='s or anything else you want to line up! It also saves you the space between lines of display style equation!}}
+\newcommand{\steps}{\textcolor{blue}{You need to use the claim environment to give a claim, then close that and use the proof environment to give your proof.}}
+\newcommand{\nproof}{\textcolor{blue}{I see what you are trying to say, but this is not a proof. Please see me if you do not understand what I mean by this.}}
+\newcommand{\equal}{\textcolor{blue}{You can only use ``='' between two things which are actually equal. This is not just a way of stringing things together!}}
+\newcommand{\mul}{\textcolor{blue}{This is not a valid way of denoting multiplication. You can use $\times$ or $\cdot$, or often the implied multiplication of adjacent variables.}}
+\newcommand{\ex}{\textcolor{blue}{You cannot just give one example. You are tasked with showing that this claim holds for all possible values.}}
+\newcommand{\thus}{\textcolor{blue}{``therefore'', ``thus", and other words of this flavor should be used only when the preceding sentence leads us to the following sentence. It is not just a way to string things together!}}
+\newcommand{\words}{\textcolor{blue}{You need punctuation and words. Remember a proof is supposed to walk the reader through your thought process.}}
+\newcommand{\order}{\textcolor{blue}{As a general rule, if the sentences can be reorganized and the proof doesn't make significantly less sense, then it is probably not very well structured! The arguments should flow into each other. Generally sentences should justify each other and you should feel like you are building one thought on top of another.}}
+\newcommand{\pr}{\textcolor{blue}{Proofread!}}
+\newcommand{\sen}{\textcolor{blue}{You can't start a sentence with a symbol.}}
+\newcommand\score[1]{\textcolor{blue}{\textbf{ (score: #1) }}}
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\let\div\undefined
+\DeclareMathOperator{\div}{div}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\im}{im}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{claim}[2][Claim]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\begin{document}
+\title{MA$\Theta$ Competition Team  Problem Set 17}
+\author{Anders Christensen, Minjoo Kim}
+\date{April 17, 2026}
+
+\maketitle
+
+\begin{problem}{1}
+Consider the following premises:
+
+\begin{enumerate}[label=\Roman*.]
+  \item All Danes have surnames ending with "-sen"
+  \item Some people with the surname Christensen are Danish
+\end{enumerate}
+Can you conclude that all people with the surname Christensen are Danish? Why or why not?
+\end{problem}
+\begin{problem}{2}
+All poets are dreamers. Some dreamers are not logical. All logical people are mathematicians. Which of the following must be true?
+\begin{enumerate}[label=\Roman*.]
+  \item Some poets are mathematicians
+  \item Some poets are not logical
+  \item Some dreamers are mathematicians
+  \item No mathematicians are poets
+  \item None must be true
+\end{enumerate}
+\end{problem}
+\begin{problem}{3}
+On a certain unnamed island, each person is either a truth-teller (always tells the truth) or a liar (always lies).
+
+Jeff says "Bill is a liar."
+Bill says "Jeff and I are of opposite types."
+
+What are Jeff and Bill?
+\begin{enumerate}[label=\Roman*.]
+  \item Both truth-tellers
+  \item Both liars
+  \item Jeff truth-teller, Bill liar
+  \item Jeff liar, Bill truth-teller
+  \item Cannot be determined
+\end{enumerate}
+\end{problem}
+\begin{problem}{4}
+Consider the following series of statementes:
+\begin{enumerate}[label=\Roman*.]
+  \item Exactly one of these statements is true.
+  \item Exactly two of these statements are true.
+  \item Exactly three of these statements are true.
+\end{enumerate}
+How many are true?
+\end{problem}
+\begin{problem}{5}
+The Mu Alpha Theta execs have had enough of members trying to sneak out during meetings, so they booby-trapped one of the two doors in Mr. Warkentin's room. Dom and Anders know which is which. Dom will always tell the truth, while Anders will always lie. You can only ask one question to one exec. How do you find the safe door and escape Mu Alpha Theta?
+\end{problem}
+\begin{problem}{6}
+If all alligators are ferocious creatures and some creepy crawlers are alligators, which statement(s) must be true?
+\begin{enumerate}[label=\Roman*.]
+  \item All alligators are creepy crawlers.
+  \item Some ferocious creatures are creepy crawlers.
+  \item Some alligators are not creepy crawlers.
+\end{enumerate}
+$\mathrm{(A)}\ \text{I only} \qquad\mathrm{(B)}\ \text{II only} \qquad\mathrm{(C)}\ \text{III only} \qquad\mathrm{(D)}\ \text{II and III only} \qquad\mathrm{(E)}\ \text{None must be true}$
+\end{problem}
+\end{document}
+
